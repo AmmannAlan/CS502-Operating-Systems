@@ -9,3 +9,6 @@ The creation and the management of processess and the disk I/O operations.
 
 2. Project 2:
 Memory Management. 
+
+Compiling using GCC on windows: 
+gcc -g *.c -lm -std=c99 -o z502
