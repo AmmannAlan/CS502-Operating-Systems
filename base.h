@@ -25,4 +25,5 @@ void UpdateBitMap(INT32 DiskID, int DiskUsege);
 void SetBitMap(Block0 *block0);
 void FormatDisk(Block0 *block0, Header *RootDirectory);
 
+
 #endif 
