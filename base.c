@@ -82,7 +82,6 @@ int currentPCBnum = 1;
 PCB *CurrentPCB;
 
 PCBQueue *ExistQueue;
-
 PCBQueue *timerQueue;
 PCBQueue *readyQueue;
 
@@ -123,19 +122,19 @@ void Dispatcher()
 
 	if (readyQueue->front != NULL)
 	{
-		//printf("\n *** Dispatcher 1: ReadyQ size£º%d", readyQueue->size);
+		//printf("\n *** Dispatcher 1: ReadyQ sizeÂ£Âº%d", readyQueue->size);
 
 		memcpy(CurrentPCB, &readyQueue->front->PCBdata, sizeof(PCB));
 		//printf("\*** Dispatcher: Current PCB ID: %d ****", CurrentPCB->processID);
 		DeQueueByName(readyQueue, CurrentPCB);
-		//printf("\n *** Dispatcher 2: ReadyQ size£º%d", readyQueue->size);
+		//printf("\n *** Dispatcher 2: ReadyQ sizeÂ£Âº%d", readyQueue->size);
 
 		mmio.Mode = Z502StartContext;
 		mmio.Field1 = (long)CurrentPCB->context;
 		mmio.Field2 = START_NEW_CONTEXT_AND_SUSPEND;
 		MEM_WRITE(Z502Context, &mmio);
 		//DeQueueByName(readyQueue, CurrentPCB);
-		//printf("\n *** Dispatcher 2: ReadyQ size£º%d", readyQueue->size);
+		//printf("\n *** Dispatcher 2: ReadyQ sizeÂ£Âº%d", readyQueue->size);
 	}
 }
 
@@ -177,7 +176,7 @@ void StartTimer(long *SleepTime)
 		mmio.Field2 = mmio.Field3 = 0;
 		MEM_WRITE(Z502Timer, &mmio);
 		//printf("\n *** 1. Wake up timer: %d ", wakeUpTime);
-		//printf("\n **** 1. wake<tq wake: Sleep Time£º %d \n", SleepTime);
+		//printf("\n **** 1. wake<tq wake: Sleep TimeÂ£Âº %d \n", SleepTime);
 	
 	}
 	else if(wakeUpTime > timerQueue->front->PCBdata.wakeUpTime)
@@ -187,7 +186,7 @@ void StartTimer(long *SleepTime)
 		mmio.Field1 = new_sleepTime;
 		mmio.Field2 = mmio.Field3 = 0;
 		MEM_WRITE(Z502Timer, &mmio);
-		//printf("\n **** 1. wake>tq wake: Sleep Time£º %d", new_sleepTime);
+		//printf("\n **** 1. wake>tq wake: Sleep TimeÂ£Âº %d", new_sleepTime);
 
 	}
 
