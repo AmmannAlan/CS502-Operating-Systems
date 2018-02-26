@@ -41,7 +41,6 @@ pfNode EnQueueNewFrame(LRU_Queue *queue, MemoryInfo *status)
 	return pnode;
 
 }
-
 //Dequeue First Element, this node will be the victim
 pfNode DeQueueLeastUsedFrame(LRU_Queue *queue)
 {
