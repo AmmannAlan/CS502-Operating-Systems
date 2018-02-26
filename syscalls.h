@@ -485,3 +485,4 @@ typedef struct {
 	MP_FRAME_DATA  frames[NUMBER_PHYSICAL_PAGES];
 } MP_INPUT_DATA;
 #endif
+
