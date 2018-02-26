@@ -1,7 +1,6 @@
 #pragma once
 #ifndef _DISKMANAGEMENT_H_
 #define _DISKMANAGEMENT_H_
-
 #include "global.h"
 #include "z502.h"
 #include "syscalls.h"
