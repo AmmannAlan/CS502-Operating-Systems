@@ -77,7 +77,6 @@ typedef struct
 // on the following is the definition of the Disk Queue
 
 
-
 PCBQueue *initialQueue();
 
 PCBNode EnQueueByPriority(PCBQueue *queue, PCB *pcb);
