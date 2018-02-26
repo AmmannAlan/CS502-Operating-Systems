@@ -4,7 +4,6 @@
 #include "DiskManagement.h"
 //#include "z502.h"
 //#include <math.h>
-
 void Initial_Block0(Block0 *block0, long DiskID)
 {
 	block0->DiskID = DiskID;
