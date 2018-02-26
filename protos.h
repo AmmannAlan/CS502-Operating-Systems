@@ -86,4 +86,5 @@ void   Z502WritePhysicalMemory( INT32, char *);
 void   *Z502PrepareProcessForExecution( void );
 void   Z502MemoryReadModify( INT32, INT32, INT32, INT32 * );
 
+
 #endif // PROTOS_H_
