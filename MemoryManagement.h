@@ -53,5 +53,4 @@ int GetPhysicalFrame(LRU_Queue *queue, INT32 VirtualPage);
 //int GetFirstElement
 
 
-
 #endif // ! _DISKMANAGEMENT_H_
