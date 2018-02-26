@@ -188,5 +188,4 @@ typedef struct  {
 #define         START_NEW_CONTEXT_ONLY                          (short)1
 #define         START_NEW_CONTEXT_AND_SUSPEND          (short)2
 
-
 #endif /* GLOBAL_H_ */
