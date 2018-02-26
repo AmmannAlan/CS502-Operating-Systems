@@ -273,7 +273,6 @@ void TerminateSelf(PCBQueue *queue, PCB *pcb)
 			free(p1);
 		}
 
-
 	}
 }
 
